@@ -1,0 +1,9 @@
+## List info hypervisor server
+ - openstack host list
+ - openstack host list --zone sa-east
+
+## List info for especified server HOST
+ - openstack host show hostname.compute.intranet
+
+## List all projects statics 
+ - openstack usage list
