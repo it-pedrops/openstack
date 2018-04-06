@@ -1,0 +1,8 @@
+## create volume first size different ##
+openstack volume create --image ID_IMAGE_LIST --size NAME_VOLUME
+
+## List volume create
+openstack volume list
+
+## Create Server
+openstack server create --flavor ID_FLAVOR --volume ID_VOLUME --key-name"KEY_NAME" --nic --net-id=ID_NETWORK --security-group ID_SGROUP NAME_INSTACE
