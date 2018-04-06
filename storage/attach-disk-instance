@@ -1,0 +1,28 @@
+- verify disks in terminal
+  $ fdisk -l
+
+- create disk
+  $ fdisk /dev/vdX 
+  
+- create disk and format EXT4 
+  $ mkfs.ext4 /dev/vdX
+
+- verify disk
+  $ fdisk -l
+  
+- mount
+  $ mount /dev/vdX/mnt
+  
+- edit to fstab
+  $ blkid
+  
+- edit fstab
+  $ vim /etc/fstab
+  
+ - include file
+  $ UUID="de5f4a85-de25-448c-9d3d-f5b9644e3a5a" /home       ext4    defaults        0       0
+  
+- mount and dismount
+  $ mount -a ------ umount /mnt
+  
+ ### OBS: if disk mount in /home, PAY ATTENTION, please execute backup. copy /home to /opt for example 
