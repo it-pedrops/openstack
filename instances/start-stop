@@ -1,0 +1,5 @@
+## start instance where status = STOP
+ - nova start ID_INSTANCE
+
+## stop instance where status = START
+ - nova stop ID_INSTANCE
