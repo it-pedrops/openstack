@@ -1,0 +1,1 @@
+for i in ` virsh list | awk '{ print $2}' | grep -v Name ` ; do virsh schedinfo $i --live --config --set vcpu_period=110000 && virsh schedinfo $i --live --config --set emulator_period=110000 && virsh schedinfo $i --live --config --set vcpu_quota=80000 &&  virsh schedinfo $i --live --config --set emulator_quota=80000; donee
