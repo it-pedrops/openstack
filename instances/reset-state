@@ -1,0 +1,7 @@
+## show details instance
+nova show ID_INSTANCE
+
+## modify status error to active 
+nova reset-state ID_INSTANCE --active
+
+Reboot instance for panel openstack
