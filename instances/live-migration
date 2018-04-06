@@ -1,0 +1,8 @@
+## list zones and status compute-hosts
+nova service-list
+
+## comand migrate instance in status RUNNING
+nova live migration ID_INSTANCE HOSTNAME_COMPUTE
+
+## Info 
+nova --help | grep "your_help"
