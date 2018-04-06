@@ -1,0 +1,2 @@
+## execute hard reboot -force
+nova reboot ID_INSTANCE --hard
