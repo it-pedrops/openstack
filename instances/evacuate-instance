@@ -1,0 +1,8 @@
+## Reboot instance, migrate new host
+nova evacuate ID_INSTANCE
+
+## Reboot instance, choose source
+nova evacuate ID_INSTANCE COMPUTE_HOST
+
+## Evacuate All instances
+nova host-evacuate
