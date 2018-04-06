@@ -1,0 +1,14 @@
+1 - Shutdown instance
+2 - Dir folder /var/lib/nova/instances/##ID_INSTANCES##
+3 - Rename disk "file disk"
+4 - Copy disk inside snapshot in folder instance
+5 - Validate permissions and user "-rw-r--r--, qemu qemu 4289819232 Jan 3 13:36 disk"
+6 - Start intance
+
+
+rsync -ahP disk /var/lib/nova/instances/"id_instance"
+
+
+Origen - var/lib/nova/instances/id
+Backup - var/lib/nova/instances/.snapshot/data/id
+Status - watch -no " ls -lha | grep disk"
