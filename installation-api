@@ -1,0 +1,25 @@
+#!/bin/bash
+#Pedro devOps p.henrriquepp@gmail.com
+
+## install epel-release
+yum install epel-release
+    
+## update S.O
+yum update -y
+
+## install pip
+yum install python-pip
+
+## upgrade pip for lastest version
+pip install --upgrade pip
+
+## install setup tools
+pip install -U pip setuptools
+  
+## install python pip
+yum install python-devel
+ yum -y install gcc gcc-c++ kernel-devel
+ 
+ ## yum install packtes api openstacl
+ 
+ pip install python-novaclient python-neutronclient python-cinderclient python-glanceclient python-heatclient python-keystoneclient python-swiftclient python-ceilometerclient
