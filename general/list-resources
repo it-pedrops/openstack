@@ -1,0 +1,23 @@
+#$ List flavor's
+openstack flavor list && nova flavor-list
+
+## list keypar's
+openstack keypair list
+
+## List networks
+openstack network list
+
+## List SGroup
+openstack security group list
+
+## List images
+openstack image-list
+
+## List volumes
+openstack volume list
+
+## List Floating ip
+openstack floating ip list
+
+## List router 
+neutron router-list  && openstack router list
