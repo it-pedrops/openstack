@@ -1,0 +1,45 @@
+# Exibe status dos recursos
+ - pcs status
+ 
+# Exibe se existem falhas nos serviços
+ - pcs resource failcount show "nome do controller"
+ 
+# Apagar mensagens de erro na chamada "pcs status"
+ - pcs resource cleanup "nome do serviço com erro"
+ 
+# Deixar servidor como standby
+ - pcs cluster standby "nome do controller"
+ 
+# Retirar servidor do modo standby
+ - pcs cluster unstandby "nome do controller"
+ 
+ Removendo Constraints
+# pcs constraint order remove neutron-l3-agent-clone neutron-metadata-agent-clone
+# pcs constraint colocation remove neutron-metadata-agent-clone neutron-l3-agent-clone
+
+# Adicionando Constraints
+ - pcs constraint order neutron-l3-agent-clone then start neutron-metadata-agent-clone
+ - pcs constraint colocation add neutron-metadata-agent-clone with neutron-l3-agent-clone
+
+
+# Visualizar recursos
+ - pcs resource show
+ 
+# Para um determinado serviço
+ - pcs resource ban "nome do serviço" "nome do nó"
+ 
+# Iniciar um determinado serviço
+ - pcs resource clear "nome do serviço" "nome do nó" 
+ 
+# Reiniciar um determinado serviço
+ - pcs resource restart "nome do serviço" nome do nó"
+ 
+# Criar um clone set
+ - pcs resource clone "nome do serviço"
+ 
+# Remover um clone set
+ - pcs resource unclone "nome do serviço"
+ 
+# Colocar o pacemaker em modo manutenção (unmanage)
+- pcs property set maintenance-mode=true
+- pcs property set maintenance-mode=false
